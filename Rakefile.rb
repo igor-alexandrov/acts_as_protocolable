@@ -8,7 +8,7 @@ begin
 
     gemspec.summary = "Guard of activity in your rails application."
     gemspec.description = "ActsAsProtocolable is the easiest way to protocol user activity inside your Rails admin interface."
-    gemspec.files = FileList["[A-Z]*", "{generators,lib}/**/*"] - FileList["**/*.log"]
+    gemspec.files = FileList["[A-Z]*", "{generators,lib,rails}/**/*"] - FileList["**/*.log"]
     gemspec.add_dependency("sys-admin", ">= 1.5.2")
     gemspec.add_dependency("activerecord", ">= 2.3.0")
   end
