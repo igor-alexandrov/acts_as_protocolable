@@ -9,14 +9,14 @@ If you want to know what is going on with your models in your Rails – you defi
 
 h1. How to install and use
 
-Install a gem.
+p. Install a gem.
 
 bc. sudo gem install acts_as_protocolable
 
-Generate migration and run it.
+p. Generate migration and run it.
 
-bc. ./script/generate acts_as_protocolable_migration
-bc. rake db:migrate
+bc.. ./script/generate acts_as_protocolable_migration
+rake db:migrate
 
 bc.. # config/environment.rb
 config.gem 'acts_as_protocolable'
@@ -26,7 +26,7 @@ class Admin::AdminController < ApplicationController
   before_filter :require_user
   before_filter :set_internal_user_id
   
-Use it!
+p. Use it!
 
 bc.. class YourModel < ActiveRecord::Base
   acts_as_protocolable(
