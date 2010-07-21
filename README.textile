@@ -1,2 +1,35 @@
-./script/generate acts_as_protocolable_migration
+|*Authors:*|Igor Alexandrov (igor.alexandrov@gmail.com)|
+|*Copyright:*|Copyright © 2010 Igor Alexandrov. All rights reserved.|
+|*License:*|MIT License ("opensource.org/licenses/mit-license.php":http://opensource.org/licenses/mit-license.php)|
+|*Website:*|"http://github.com/igor-alexandrov/acts_as_protocolable":http://github.com/igor-alexandrov/acts_as_protocolable|
 
+h1. When do you need it?
+
+If you want to know what is going on with your models in your Rails – you definitely had to use acts_as_protocolable. How to use it? Look over next chapter.
+
+h1. How to install and use
+
+Install a gem.
+
+bc. sudo gem install acts_as_protocolable
+
+Generate migration and run it.
+
+bc. ./script/generate acts_as_protocolable_migration
+bc. rake db:migrate
+
+bc.. # config/environment.rb
+config.gem 'acts_as_protocolable'
+
+bc.. # app/controllers/admin/admin_controller.rb_
+class Admin::AdminController < ApplicationController
+  before_filter :require_user
+  before_filter :set_internal_user_id
+  
+Use it!
+
+bc.. class YourModel < ActiveRecord::Base
+  acts_as_protocolable(
+    :only => ['create', 'update']
+  )  
+end

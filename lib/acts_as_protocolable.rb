@@ -2,7 +2,7 @@ module ActsAsProtocolable
   mattr_accessor :internal_user_id
 
   module ClassMethods
-    def acts_as_protocolablable(options = {})
+    def acts_as_protocolable(options = {})
       self.acts_as_protocolable_model(options)
     end
     
