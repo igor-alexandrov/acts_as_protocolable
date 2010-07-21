@@ -16,15 +16,15 @@ Gem::Specification.new do |s|
     "README.textile"
   ]
   s.files = [
-    "Manifest.txt",
-     "README.textile",
+    "README.textile",
      "Rakefile.rb",
      "VERSION",
      "generators/acts_as_protocolable_migration/acts_as_protocolable_migration_generator.rb",
      "generators/acts_as_protocolable_migration/templates/migration.rb",
      "lib/acts_as_protocolable.rb",
      "lib/acts_as_protocolable/base.rb",
-     "lib/acts_as_protocolable/for_model.rb"
+     "lib/acts_as_protocolable/for_model.rb",
+     "rails/init.rb"
   ]
   s.homepage = %q{http://github.com/igor-alexandrov/acts_as_protocolable}
   s.rdoc_options = ["--charset=UTF-8"]
