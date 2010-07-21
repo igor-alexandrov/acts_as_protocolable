@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{acts_as_protocolable}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Igor Alexandrov"]
-  s.date = %q{2010-07-21}
+  s.date = %q{2010-07-22}
   s.description = %q{ActsAsProtocolable is the easiest way to protocol user activity inside your Rails admin interface.}
   s.email = %q{igor.alexandrov@gmail.com}
   s.extra_rdoc_files = [
