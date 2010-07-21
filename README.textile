@@ -1,0 +1,2 @@
+./script/generate acts_as_protocolable_migration
+
