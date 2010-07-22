@@ -5,9 +5,11 @@
 
 h1. When do you need it?
 
-If you want to know what is going on with your models in your Rails – you definitely had to use acts_as_protocolable. How to use it? Look over next chapter.
+It is very useful gem if you want to provide a system activity page inside your backend.
 
-h1. How to install and use
+How to use it? Look over next chapter.
+
+h1. How to install and use it?
 
 p. Install a gem.
 
@@ -18,17 +20,29 @@ p. Generate migration and run it.
 bc.. ./script/generate acts_as_protocolable_migration
 rake db:migrate
 
+p. Now a bit of configuration.
+
 bc.. # config/environment.rb
 config.gem 'acts_as_protocolable'
 
-bc.. # app/controllers/admin/admin_controller.rb_
+bc.. # app/controllers/admin/admin_controller.rb
 class Admin::AdminController < ApplicationController
-  before_filter :require_user
   before_filter :set_internal_user_id
+  
+  def set_internal_user_id
+    ActsAsProtocolable.internal_user_id = current_user.id
+  end  
+end
   
 p. Use it!
 
 bc.. class YourModel < ActiveRecord::Base
+  acts_as_protocolable
+end
+
+p. Or with parameters.
+
+bc.. class YourAnotherModel < ActiveRecord::Base
   acts_as_protocolable(
     :only => ['create', 'update']
   )  
